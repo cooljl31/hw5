@@ -1025,3 +1025,10 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (15.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
   Rendered movies/index.html.haml within layouts/application (40.6ms)
 Completed 200 OK in 1135ms (Views: 1117.2ms | ActiveRecord: 15.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (13.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDirectorToMovies (20160713170125)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (28.4ms)[0m  [1mALTER TABLE "movies" ADD "director" varchar[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160713170125"]]
+  [1m[36m (43.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (11.9ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
